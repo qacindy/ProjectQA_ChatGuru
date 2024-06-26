@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-26T13:56:19.968270" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes" source="C:\Automation\Projeto_ChatGuru\Autom_RobotFramework\testes.robot">
+<test id="s1-t1" name="Pré-Condições:" line="10">
+<kw name="Abrir o navegador" owner="resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T13:56:20.164408" level="INFO">Opening browser 'edge' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T13:56:20.164408" elapsed="7.351718"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-26T13:56:27.517133" elapsed="0.044561"/>
+</kw>
+<status status="PASS" start="2024-06-26T13:56:20.163294" elapsed="7.398400"/>
+</kw>
+<kw name="Given que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T13:56:27.562707" elapsed="0.029838"/>
+</kw>
+<status status="PASS" start="2024-06-26T13:56:27.562707" elapsed="0.030837"/>
+</kw>
+<kw name="When faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T13:56:27.594545" elapsed="0.022844"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T13:56:27.618412" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>cintia.avanz@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T13:56:27.617389" elapsed="0.149416"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-26T13:56:27.767796" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-06-26T13:56:27.800628" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>2w@eYQy4r2y</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T13:56:27.767796" elapsed="0.096689"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T13:56:27.864485" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T13:56:27.864485" elapsed="7.181969"/>
+</kw>
+<status status="PASS" start="2024-06-26T13:56:27.593544" elapsed="7.452910"/>
+</kw>
+<kw name="And eu clico em &quot;Chats&quot; no menu da barra lateral" owner="resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2024-06-26T13:56:40.185630" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-26T13:56:40.185630" level="FAIL">Text '//img[@alt='ChatGuru']' did not appear in 5 seconds.</msg>
+<arg>${MENU_CHATS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2024-06-26T13:56:35.047455" elapsed="5.139175">Text '//img[@alt='ChatGuru']' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${MENU_CHATS}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2024-06-26T13:56:40.187631" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CHAT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-26T13:56:40.187631" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-26T13:56:35.047455" elapsed="5.140176">Text '//img[@alt='ChatGuru']' did not appear in 5 seconds.</status>
+</kw>
+<kw name="And eu mando uma mensagem com um anexo para o número do Whatsapp &quot;15799001582&quot;" owner="resources">
+<status status="NOT RUN" start="2024-06-26T13:56:40.187631" elapsed="0.001109"/>
+</kw>
+<kw name="Then eu verei a mensagem enviada com sucesso" owner="resources">
+<status status="NOT RUN" start="2024-06-26T13:56:40.188740" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar o navegador" owner="resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T13:56:40.189891" elapsed="2.234466"/>
+</kw>
+<status status="PASS" start="2024-06-26T13:56:40.189891" elapsed="2.234466"/>
+</kw>
+<status status="FAIL" start="2024-06-26T13:56:20.163294" elapsed="22.262587">Text '//img[@alt='ChatGuru']' did not appear in 5 seconds.</status>
+</test>
+<doc>Essa suíte testa https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f</doc>
+<status status="FAIL" start="2024-06-26T13:56:19.969271" elapsed="22.459633"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testes">Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
