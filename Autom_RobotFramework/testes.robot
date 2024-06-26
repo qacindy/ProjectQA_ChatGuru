@@ -2,7 +2,7 @@
 Documentation  Essa suíte testa https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f
 Resource       resources.robot
 Test Setup     Abrir o navegador
-Test Teardown  Fechar o navegador
+Test Teardown  Close Browser
 Library    OperatingSystem
 
 *** Test Cases ***

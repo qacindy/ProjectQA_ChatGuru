@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 ${URL}                        https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f
 ${URL_NOTIFICATIONS}          chrome://settings/content/notifications
 #${EDGE_DRIVER_PATH}           C:\Automation\Projeto_ChatGuru\Autom_RobotFramework\msedgedriver.exe
+${CHROMEDRIVER_PATH}           C:\Automation\Projeto_ChatGuru\autom_robotframework\chromedriver.exe
 ${BROWSER}                    chrome
 
 ${RB_NOTIFICATIONS}          /html/body/settings-ui//div[2]/settings-main//settings-basic-page//div[1]/settings-section[5]/settings-privacy-page//settings-animated-pages/settings-subpage/div/cr-radio-group/cr-radio-button[2]
@@ -21,7 +22,7 @@ ${TXT_MSG_ENVIADA}           //span[contains(@class,'msg-contentT ct')]
 *** Keywords ***
 
 Abrir o navegador
-    Open Browser    ${URL}     ${BROWSER}     
+    Open Browser    ${URL}     ${BROWSER}     executable_path=${CHROMEDRIVER_PATH}
     Maximize Browser Window
 
 Fechar o navegador
